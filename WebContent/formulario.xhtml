@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+</h:head>
+<h:body>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Nombre" />
+			<h:inputText value="#{formulario.empleado.nombre}" /> <!-- Se usa un ManagedBean -->
+
+			<h:outputLabel value="Apellido" />
+			<h:inputText value="#{formulario.empleado.apellido}" /> <!-- Se usa un ManagedBean -->
+
+			<h:outputLabel value="Area" />
+			<h:inputText value="#{formulario.empleado.area}" /> <!-- Se usa un ManagedBean -->
+
+			<h:outputLabel value="Edad" />
+			<h:inputText value="#{formulario.empleado.edad}" /> <!-- Se usa un ManagedBean -->
+
+			<h:outputLabel value="Fecha Ingreso" />
+			<h:inputText value="#{formulario.empleado.fechaIngreso}"> <!-- Se usa un ManagedBean -->
+				<f:convertDateTime pattern="dd/MM/yyyy" />
+			</h:inputText>
+
+			<!-- Este caso, la acción ejecuta al método del ManagedBean -->
+			<h:commandButton value="Procesar" action="#{formulario.procesar}" />
+			
+			<!-- En este caso, la acción se llama igual que la pagina final.xhtml -->
+			<h:commandButton value="Continuar" action="final" />
+		</h:panelGrid>
+	</h:form>
+
+	<h:messages />
+</h:body>
+</html>

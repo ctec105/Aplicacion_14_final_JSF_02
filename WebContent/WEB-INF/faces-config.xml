@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.1"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd">
+   
+    <!-- Registrar el listener -->
+    <lifecycle>
+        <phase-listener>pe.edu.aprender.listener.JSFListener</phase-listener>
+    </lifecycle>
+
+	<!-- Aqui podemos agregar nuestros ManagedBean si no queremos por anotaciones -->
+	<!-- <managed-bean>
+	    <managed-bean-name>formulario</managed-bean-name>
+	    <managed-bean-class>pe.edu.aprender.managed.FormularioBean</managed-bean-class>
+	    <managed-bean-scope>request</managed-bean-scope>
+	    <managed-property>
+	        <property-name>loginBO</property-name>
+	        <value>#{loginBO}</value>
+	    </managed-property>
+		</managed-bean>
+	 -->
+</faces-config>
