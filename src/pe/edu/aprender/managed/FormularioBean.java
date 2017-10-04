@@ -25,15 +25,8 @@ public class FormularioBean {
 
 	// En el ManagedBean “FormularioBean” añadimos Action Method
 	public String procesar() {
-		// Invocar capa de negocio
 		FacesMessage facesMessage = new FacesMessage("Registro completo ");
 		FacesContext.getCurrentInstance().addMessage(null, facesMessage);
-
-		FacesContext.getCurrentInstance().addMessage(
-				null,
-				new FacesMessage("Su nombre completo es: "
-						.concat(empleado.getNombre()).concat(" ")
-						.concat(empleado.getApellido())));
 		return "resultado";
 	}
 
