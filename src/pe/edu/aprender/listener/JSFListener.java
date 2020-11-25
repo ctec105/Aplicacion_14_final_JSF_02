@@ -23,13 +23,11 @@ public class JSFListener implements PhaseListener {
 	 * alguna lógica especial en determinada fase, se deberá obtener el ID de la
 	 * fase y en base a condiciones, controlar el flujo del código
 	 */
-	@Override
 	public void beforePhase(PhaseEvent arg0) {
 		logger.info("Antes de fase: " + arg0.getPhaseId());
 
 	}
 
-	@Override
 	public void afterPhase(PhaseEvent arg0) {
 		logger.info("Despues de fase: " + arg0.getPhaseId());
 	}
@@ -38,7 +36,6 @@ public class JSFListener implements PhaseListener {
 	 * El método getPhaseId() sirve para determinar a que fase está asociado el
 	 * listener. Cuando se usa para cualquier fase retorna el valor ANY_PHASE:
 	 */
-	@Override
 	public PhaseId getPhaseId() {
 		return PhaseId.ANY_PHASE;
 	}
